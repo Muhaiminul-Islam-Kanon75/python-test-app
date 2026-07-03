@@ -9,7 +9,7 @@ on:
 
 jobs: 
   python-jobName: 
-    runs-on: ubununtu-latest
+    runs-on: ubuntu-latest
 
     steps: 
     - name: Checkout Code 
