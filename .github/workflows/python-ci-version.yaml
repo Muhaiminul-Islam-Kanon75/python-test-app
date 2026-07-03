@@ -2,7 +2,7 @@ name: python version test
 
 on: 
   push: 
-  - branches: ["main"]
+    branches: ["main"]
   pull_request: 
 
 jobs: 
