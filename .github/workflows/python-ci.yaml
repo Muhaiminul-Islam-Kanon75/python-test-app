@@ -1,0 +1,27 @@
+name: python automate CI
+
+on: 
+  push: 
+    branches: ["main"]
+  pull_request: 
+    branches: 
+    -  main
+
+jobs: 
+  python-jobName: 
+    runs-on: ubununtu-latest
+
+    steps: 
+    - name: Checkout Code 
+      uses: actions/checkout@v4
+    - name: python setup
+      uses: actions/setup-python@v4
+      with: 
+        python-version: "3.12"
+    - name: upgrade pip version 
+      run: python -m pip install --upgrade pip
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Start testing 
+      run: pytest
+
